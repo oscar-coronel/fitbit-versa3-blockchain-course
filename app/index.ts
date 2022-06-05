@@ -1,14 +1,26 @@
-//import clock from 'clock';
-import { HeartRateSensor } from "heart-rate";
 import document from 'document';
 
-/*clock.granularity  = 'minutes';
 
+/*import clock from 'clock';
+clock.granularity  = 'minutes';
 var clockLabel = document.getElementById('clock-label');
-
 clock.addEventListener('tick', (evt) => {
     clockLabel.text = evt.date.toTimeString().slice(0, -4);
 })*/
+
+let eContador = document.getElementById("contador");
+
+function updateDisplay() {
+   const newValue = String(Number(eContador.text) + 1)
+   console.log(`Hi World ${ newValue }`)
+   eContador.text = newValue
+}
+
+setInterval(updateDisplay, 5000);
+
+/*
+import { HeartRateSensor } from "heart-rate";
+import document from 'document';
 
 
 // Fetch UI elements we will need to change
@@ -60,4 +72,4 @@ hrm.onreading = function() {
 hrm.start();
 
 // And update the display every second
-setInterval(updateDisplay, 1000);
+setInterval(updateDisplay, 1000);*/

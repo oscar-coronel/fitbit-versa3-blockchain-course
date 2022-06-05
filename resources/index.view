@@ -4,7 +4,8 @@
       text-anchor="middle" text-length="20">00:00:00</text>
 </svg>-->
 
-<svg>
-  <text id="hrm" x="0" y="72%" class="large-value">42</text>
-  <text id="updated" x="0" y="92%" class="updated">now!</text>
+<svg viewport-fill="fb-cyan">
+  <text id="contador" x="50%" y="50%+15"
+      fill="black" font-size="32" font-family="System-Regular"
+      text-anchor="middle" text-length="20">0</text>
 </svg>
