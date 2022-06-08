@@ -1,5 +1,7 @@
 import document from 'document';
 
+import { HeartRateSensor } from "heart-rate";
+
 
 /*import clock from 'clock';
 clock.granularity  = 'minutes';
@@ -11,9 +13,21 @@ clock.addEventListener('tick', (evt) => {
 let eContador = document.getElementById("contador");
 
 function updateDisplay() {
-   const newValue = String(Number(eContador.text) + 1)
-   console.log(`Hi World ${ newValue }`)
-   eContador.text = newValue
+  const newValue = String(Number(eContador.text) + 1)
+  console.log(`Hi World ${ newValue }`)
+  eContador.text = newValue
+
+  if (HeartRateSensor) {
+    console.log("This device has a HeartRateSensor!");
+    const hrm = new HeartRateSensor();
+    hrm.addEventListener("reading", () => {
+      console.log(`Current heart rate: ${hrm.heartRate}`);
+    });
+    hrm.start();
+  } else {
+    console.log("This device does NOT have a HeartRateSensor!");
+  }
+
 }
 
 setInterval(updateDisplay, 5000);

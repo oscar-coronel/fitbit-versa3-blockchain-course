@@ -14,7 +14,9 @@
     "appDisplayName": "Fitbit First",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"
