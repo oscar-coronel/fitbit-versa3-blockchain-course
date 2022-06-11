@@ -11,11 +11,12 @@
   "fitbit": {
     "appUUID": "622ea874-8bb9-4d76-83fd-f40564258479",
     "appType": "app",
-    "appDisplayName": "Fitbit First",
+    "appDisplayName": "MS",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
-      "access_heart_rate"
+      "access_heart_rate",
+      "run_background"
     ],
     "buildTargets": [
       "atlas",
